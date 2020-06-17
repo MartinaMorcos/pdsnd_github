@@ -220,6 +220,8 @@ def main():
 
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
+        while restart.lower() not in ('yes','no'):
+            restart = input('\nPlease enter yes or no only. Would you like to restart?\n')
         if restart.lower() != 'yes':
             break
 
