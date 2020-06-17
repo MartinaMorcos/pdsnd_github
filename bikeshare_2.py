@@ -47,7 +47,7 @@ def get_filters():
 
     
 
-    print('-'*40)
+    print('*'*40)
     return city, month, day
 
 
@@ -117,7 +117,7 @@ def time_stats(df):
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('*'*40)
 
 
 def station_stats(df):
@@ -140,7 +140,7 @@ def station_stats(df):
   
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('*'*40)
 
 
 def trip_duration_stats(df):
@@ -161,7 +161,7 @@ def trip_duration_stats(df):
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('*'*40)
 
 
 def user_stats(df):
@@ -191,7 +191,7 @@ def user_stats(df):
         
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('*'*40)
 
 
 def main():
@@ -210,17 +210,23 @@ def main():
         print(N)
 
         raw_data = input('\nDo you want to see the raw data? Enter yer or no.\n')
+        while raw_data.lower() not in ("yes","no"):
+            raw_data = input('\nPlease enter yes or no only. Do you want to see the raw data?\n')
         while n<N:
             if raw_data.lower() != 'yes':
                 break
             else:
                 print(df[n:n+5])
                 raw_data = input('\nDo you want to see the next 5 rows? Enter yer or no.\n')
+                while raw_data.lower() not in ("yes","no"):
+                    raw_data = input('\nPlease enter yes or no only. Do you want to see the raw data?\n')
                 n+=5
 
 
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
+        while restart.lower() not in ('yes','no'):
+            restart = input('\nPlease enter yes or no only. Would you like to restart?\n')
         if restart.lower() != 'yes':
             break
 
