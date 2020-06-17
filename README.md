@@ -9,10 +9,12 @@ This project explores data related to bike share systems for three major cities 
 
 ### Files used
 chicago.csv
+
 new_york_city.csv
+
 washington.csv
 
 
 ### Credits
-Udacity's Nandodegree course "Programming for data Science with Python"
+Udacity's Nandodegree course "Programming for Data Science with Python"
 
