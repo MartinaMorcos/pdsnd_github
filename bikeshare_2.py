@@ -209,12 +209,16 @@ def main():
         print(N)
 
         raw_data = input('\nDo you want to see the raw data? Enter yer or no.\n')
+        while raw_data.lower() not in ("yes","no"):
+            raw_data = input('\nPlease enter yes or no only. Do you want to see the raw data?\n')
         while n<N:
             if raw_data.lower() != 'yes':
                 break
             else:
                 print(df[n:n+5])
                 raw_data = input('\nDo you want to see the next 5 rows? Enter yer or no.\n')
+                while raw_data.lower() not in ("yes","no"):
+                    raw_data = input('\nPlease enter yes or no only. Do you want to see the raw data?\n')
                 n+=5
 
 
